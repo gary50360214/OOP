@@ -1,7 +1,9 @@
 #include "stdafx.h"
+#include "stdafx.h"
 #include <string>
 #include <iostream>
 using namespace System;
+<<<<<<< HEAD
 bool Guess(int number) {
 static int target = -1;
 if (target == -1) {
@@ -13,14 +15,24 @@ std::cout << "Correct !!";
 target = -1;
 return true;
 }
-else std::cout << "Wrong" << std::endl;
+else if (number > target) std::cout << "Smaller" << std::endl;
+else if (number < target) std::cout << "Bigger" << std::endl;
 return false;
-}
-int main(array<System::String ^> ^args)
+=======
+bool Guess(int number)
 {
-int guess;
-do {
-std::cin >> guess;
-} while (!Guess(guess));
-return 0;
+>>>>>>> 46f3143d876a705789c8bc7944025b61eff02926
+}
+int main(array<System::String^>^ args)
+{
+    int guess;
+
+    do
+    {
+        std::cout << "Choose a number between 1 - 100 :";
+        std::cin >> guess;
+    }
+    while (!Guess(guess));
+
+    return 0;
 }
